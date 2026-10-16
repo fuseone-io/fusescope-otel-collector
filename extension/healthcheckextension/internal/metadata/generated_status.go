@@ -8,7 +8,7 @@ import (
 
 var (
 	Type      = component.MustNewType("signoz_health_check")
-	ScopeName = "github.com/SigNoz/signoz-otel-collector/extension/healthcheckextension"
+	ScopeName = "github.com/fuseone-io/fusescope-otel-collector/extension/healthcheckextension"
 )
 
 const (

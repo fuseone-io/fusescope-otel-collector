@@ -11,7 +11,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/SigNoz/signoz-otel-collector/pkg/timebucketedset/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/timebucketedset/internal/metadata"
 )
 
 type telemetry struct {

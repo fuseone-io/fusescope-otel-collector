@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"github.com/SigNoz/signoz-otel-collector/pkg/metering"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/metering"
 	"go.opentelemetry.io/collector/pdata/plog"
 	"go.uber.org/zap"
 )

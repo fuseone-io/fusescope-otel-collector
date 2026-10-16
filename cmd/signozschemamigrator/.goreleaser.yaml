@@ -2,15 +2,15 @@
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 version: 2
 
-project_name: signoz-schema-migrator
+project_name: fusescope-schema-migrator
 
 before:
   hooks:
     - go mod tidy
 
 builds:
-  - id: signoz-schema-migrator
-    binary: bin/signoz-schema-migrator
+  - id: fusescope-schema-migrator
+    binary: bin/fusescope-schema-migrator
     main: cmd/signozschemamigrator/main.go
     goos:
       - linux

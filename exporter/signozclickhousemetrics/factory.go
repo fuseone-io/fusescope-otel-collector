@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/ClickHouse/clickhouse-go/v2"
-	internalmetadata "github.com/SigNoz/signoz-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
-	"github.com/SigNoz/signoz-otel-collector/usage"
+	internalmetadata "github.com/fuseone-io/fusescope-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/usage"
 	"github.com/google/uuid"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/config/configoptional"

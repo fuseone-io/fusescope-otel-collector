@@ -15,8 +15,8 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric/metricdata"
 	"go.opentelemetry.io/otel/sdk/metric/metricdata/metricdatatest"
 
-	"github.com/SigNoz/signoz-otel-collector/constants"
-	"github.com/SigNoz/signoz-otel-collector/processor/signozlogsnormalizerprocessor/internal/metadatatest"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
+	"github.com/fuseone-io/fusescope-otel-collector/processor/signozlogsnormalizerprocessor/internal/metadatatest"
 )
 
 func testConfig() *Config {

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/SigNoz/signoz-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 )
 
 // separator is a unit separator so components containing ':' or other

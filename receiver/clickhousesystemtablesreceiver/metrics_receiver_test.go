@@ -13,7 +13,7 @@ import (
 	"go.opentelemetry.io/collector/receiver/receivertest"
 	"go.uber.org/zap"
 
-	"github.com/SigNoz/signoz-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
 )
 
 func mustObsReport(t *testing.T) *receiverhelper.ObsReport {

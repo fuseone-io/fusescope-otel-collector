@@ -1,3 +1,3 @@
 //go:generate mdatagen metadata.yaml
 
-package signozlogspipelineprocessor // import "github.com/SigNoz/signoz-otel-collector/processor/signozlogspipelineprocessor"
+package signozlogspipelineprocessor // import "github.com/fuseone-io/fusescope-otel-collector/processor/signozlogspipelineprocessor"

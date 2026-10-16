@@ -3,7 +3,7 @@ package tagdedup
 import (
 	"testing"
 
-	"github.com/SigNoz/signoz-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 	"github.com/stretchr/testify/assert"
 )
 

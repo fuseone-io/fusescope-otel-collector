@@ -15,11 +15,11 @@ import (
 )
 
 func Meter(settings component.TelemetrySettings) metric.Meter {
-	return settings.MeterProvider.Meter("github.com/SigNoz/signoz-otel-collector/processor/signozlogsnormalizerprocessor")
+	return settings.MeterProvider.Meter("github.com/fuseone-io/fusescope-otel-collector/processor/signozlogsnormalizerprocessor")
 }
 
 func Tracer(settings component.TelemetrySettings) trace.Tracer {
-	return settings.TracerProvider.Tracer("github.com/SigNoz/signoz-otel-collector/processor/signozlogsnormalizerprocessor")
+	return settings.TracerProvider.Tracer("github.com/fuseone-io/fusescope-otel-collector/processor/signozlogsnormalizerprocessor")
 }
 
 // TelemetryBuilder provides an interface for components to report telemetry

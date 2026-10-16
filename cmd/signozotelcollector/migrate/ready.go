@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/ClickHouse/clickhouse-go/v2"
-	"github.com/SigNoz/signoz-otel-collector/cmd/signozotelcollector/config"
 	"github.com/cenkalti/backoff/v4"
+	"github.com/fuseone-io/fusescope-otel-collector/cmd/signozotelcollector/config"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 )

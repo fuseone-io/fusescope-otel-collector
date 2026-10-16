@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"github.com/SigNoz/signoz-otel-collector/constants"
-	"github.com/SigNoz/signoz-otel-collector/utils"
 	"github.com/bytedance/sonic"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/plog"

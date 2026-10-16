@@ -10,11 +10,11 @@ import (
 	"os"
 	"sync"
 
-	signozstanzaentry "github.com/SigNoz/signoz-otel-collector/processor/signozlogspipelineprocessor/stanza/entry"
-	"github.com/SigNoz/signoz-otel-collector/utils"
 	"github.com/expr-lang/expr"
 	"github.com/expr-lang/expr/ast"
 	"github.com/expr-lang/expr/vm"
+	signozstanzaentry "github.com/fuseone-io/fusescope-otel-collector/processor/signozlogspipelineprocessor/stanza/entry"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza/entry"
 )
 

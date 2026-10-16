@@ -1,5 +1,5 @@
 type: signozlogsnormalizer
-github_project: SigNoz/signoz-otel-collector
+github_project: fuseone-io/fusescope-otel-collector
 
 status:
   class: processor

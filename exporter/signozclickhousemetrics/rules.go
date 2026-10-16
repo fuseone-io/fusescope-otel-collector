@@ -7,7 +7,7 @@ import (
 
 	"go.uber.org/zap"
 
-	pkgfingerprint "github.com/SigNoz/signoz-otel-collector/internal/common/fingerprint"
+	pkgfingerprint "github.com/fuseone-io/fusescope-otel-collector/internal/common/fingerprint"
 )
 
 // protectedLabels can never be aggregated away: le/quantile are series identity,

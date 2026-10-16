@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/SigNoz/signoz-otel-collector/constants"
-	signozstanzaentry "github.com/SigNoz/signoz-otel-collector/processor/signozlogspipelineprocessor/stanza/entry"
-	signozstanzahelper "github.com/SigNoz/signoz-otel-collector/processor/signozlogspipelineprocessor/stanza/operator/helper"
-	"github.com/SigNoz/signoz-otel-collector/utils"
 	"github.com/bytedance/sonic"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
+	signozstanzaentry "github.com/fuseone-io/fusescope-otel-collector/processor/signozlogspipelineprocessor/stanza/entry"
+	signozstanzahelper "github.com/fuseone-io/fusescope-otel-collector/processor/signozlogspipelineprocessor/stanza/operator/helper"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza/entry"
 	"go.opentelemetry.io/otel/metric"
 	"go.uber.org/zap"
@@ -55,7 +55,7 @@ func (p *Processor) transform(entry *entry.Entry) error {
 	case string:
 		parsedValue = p.processTextLogs(v)
 		original = v
-	// no need to cover other map types; check comment https://github.com/SigNoz/signoz-otel-collector/pull/584#discussion_r2042020882
+	// no need to cover other map types; check comment https://github.com/fuseone-io/fusescope-otel-collector/pull/584#discussion_r2042020882
 	case map[string]any:
 		parsedValue = v
 		if p.jsonBodyDualIngestion {

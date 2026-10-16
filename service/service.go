@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/SigNoz/signoz-otel-collector/opamp"
-	"github.com/SigNoz/signoz-otel-collector/signozcol"
+	"github.com/fuseone-io/fusescope-otel-collector/opamp"
+	"github.com/fuseone-io/fusescope-otel-collector/signozcol"
 	"go.uber.org/zap"
 )
 

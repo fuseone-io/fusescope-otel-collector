@@ -16,9 +16,9 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zaptest"
 
-	internalmetadata "github.com/SigNoz/signoz-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
-	pkgfingerprint "github.com/SigNoz/signoz-otel-collector/internal/common/fingerprint"
-	"github.com/SigNoz/signoz-otel-collector/pkg/pdatagen/pmetricsgen"
+	internalmetadata "github.com/fuseone-io/fusescope-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
+	pkgfingerprint "github.com/fuseone-io/fusescope-otel-collector/internal/common/fingerprint"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/pdatagen/pmetricsgen"
 )
 
 func reductionTestConfig() *Config {

@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
-	"github.com/SigNoz/signoz-otel-collector/constants"
-	"github.com/SigNoz/signoz-otel-collector/utils/fingerprint"
-	"github.com/SigNoz/signoz-otel-collector/utils/flatten"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
+	"github.com/fuseone-io/fusescope-otel-collector/utils/fingerprint"
+	"github.com/fuseone-io/fusescope-otel-collector/utils/flatten"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/plog"
 	"go.opentelemetry.io/collector/pipeline"

@@ -10,7 +10,7 @@ import (
 
 	"github.com/Azure/azure-sdk-for-go/sdk/azcore/to"
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/SigNoz/signoz-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 	lru "github.com/hashicorp/golang-lru/v2"
 	cmock "github.com/srikanthccv/ClickHouse-go-mock"
 	"github.com/stretchr/testify/assert"
@@ -117,11 +117,11 @@ func TestWalk_EndToEndTypes(t *testing.T) {
 	}
 
 	tests := []struct {
-		name               string
-		input              map[string]any
-		cfg                JSONConfig
-		expected           map[string][]utils.FieldDataType
-		expectedNumOfKeys  int
+		name              string
+		input             map[string]any
+		cfg               JSONConfig
+		expected          map[string][]utils.FieldDataType
+		expectedNumOfKeys int
 	}{
 		{
 			name: "message_skip_test_simple",

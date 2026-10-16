@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package cwmetricstream // import "github.com/SigNoz/signoz-otel-collector/receiver/signozawsfirehosereceiver/internal/unmarshaler/cwmetricstream"
+package cwmetricstream // import "github.com/fuseone-io/fusescope-otel-collector/receiver/signozawsfirehosereceiver/internal/unmarshaler/cwmetricstream"
 
 import (
 	"fmt"
@@ -153,7 +153,7 @@ func (mb *metricBuilder) AddDataPoint(metric cWMetric) {
 			dp.SetDoubleValue(val)
 			dp.SetTimestamp(pcommon.NewTimestampFromTime(time.UnixMilli(metric.Timestamp)))
 			for k, v := range metric.Dimensions {
-				// normalizing before adding dimensions as attributes to ensure 
+				// normalizing before adding dimensions as attributes to ensure
 				// consistent naming of dimensions which may violate AWS standards
 				normalisedKey := normaliseAttributeName(k)
 				dp.Attributes().PutStr(ToSemConvAttributeKey(normalisedKey), v)

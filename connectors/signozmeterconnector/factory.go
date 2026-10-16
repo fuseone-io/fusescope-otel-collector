@@ -8,7 +8,7 @@ import (
 	"go.opentelemetry.io/collector/connector"
 	"go.opentelemetry.io/collector/consumer"
 
-	"github.com/SigNoz/signoz-otel-collector/connectors/signozmeterconnector/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/connectors/signozmeterconnector/internal/metadata"
 )
 
 const (

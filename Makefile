@@ -1,7 +1,7 @@
 COMMIT_SHA ?= $(shell git rev-parse HEAD)
-REPONAME ?= signoz
-IMAGE_NAME ?= signoz-otel-collector
-MIGRATOR_IMAGE_NAME ?= signoz-schema-migrator
+REPONAME ?= ghcr.io/fuseone-io
+IMAGE_NAME ?= fusescope-otel-collector
+MIGRATOR_IMAGE_NAME ?= fusescope-schema-migrator
 CONFIG_FILE ?= ./config/default-config.yaml
 DOCKER_TAG ?= latest
 
@@ -34,8 +34,8 @@ test:
 
 .PHONY: build
 build:
-	go build -o .build/${GOOS}-${GOARCH}/signoz-otel-collector ./cmd/signozotelcollector
-	go build -o .build/${GOOS}-${GOARCH}/signoz-schema-migrator ./cmd/signozschemamigrator
+	go build -o .build/${GOOS}-${GOARCH}/fusescope-otel-collector ./cmd/signozotelcollector
+	go build -o .build/${GOOS}-${GOARCH}/fusescope-schema-migrator ./cmd/signozschemamigrator
 
 .PHONY: amd64
 amd64:
@@ -57,26 +57,26 @@ fmt:
 	@echo Running go fmt on query service ...
 	@$(GOFMT) -e -s -l -w .
 
-.PHONY: build-and-push-signoz-collector
-build-and-push-signoz-collector:
+.PHONY: build-and-push-collector
+build-and-push-collector:
 	@echo "------------------"
-	@echo  "--> Build and push signoz collector docker image"
+	@echo  "--> Build and push FuseScope collector docker image"
 	@echo "------------------"
 	docker buildx build --platform linux/amd64,linux/arm64 --progress plain \
 		--no-cache --push -f cmd/signozotelcollector/Dockerfile \
 		--tag $(REPONAME)/$(IMAGE_NAME):$(DOCKER_TAG) .
 
-.PHONY: build-signoz-collector
-build-signoz-collector:
+.PHONY: build-collector
+build-collector:
 	@echo "------------------"
-	@echo  "--> Build signoz collector docker image"
+	@echo  "--> Build FuseScope collector docker image"
 	@echo "------------------"
 	docker build --build-arg TARGETPLATFORM="linux/amd64" \
 		--no-cache -f cmd/signozotelcollector/Dockerfile --progress plain \
 		--tag $(REPONAME)/$(IMAGE_NAME):$(DOCKER_TAG) .
 
-.PHONY: build-signoz-schema-migrator
-build-signoz-schema-migrator:
+.PHONY: build-fusescope-schema-migrator
+build-fusescope-schema-migrator:
 	@echo "------------------"
 	@echo  "--> Build schema migrator docker image"
 	@echo "------------------"
@@ -84,8 +84,8 @@ build-signoz-schema-migrator:
 		--no-cache -f cmd/signozschemamigrator/Dockerfile --progress plain \
 		--tag $(REPONAME)/$(MIGRATOR_IMAGE_NAME):$(DOCKER_TAG) .
 
-.PHONY: build-and-push-signoz-schema-migrator
-build-and-push-signoz-schema-migrator:
+.PHONY: build-and-push-fusescope-schema-migrator
+build-and-push-fusescope-schema-migrator:
 	@echo "------------------"
 	@echo  "--> Build and push schema migrator docker image"
 	@echo "------------------"

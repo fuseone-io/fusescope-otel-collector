@@ -3,8 +3,8 @@ package v1
 import (
 	"testing"
 
-	"github.com/SigNoz/signoz-otel-collector/constants"
-	"github.com/SigNoz/signoz-otel-collector/pkg/pdatagen/plogsgen"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/pdatagen/plogsgen"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
 )

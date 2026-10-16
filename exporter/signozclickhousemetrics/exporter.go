@@ -12,8 +12,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	internalmetadata "github.com/SigNoz/signoz-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
-	"github.com/SigNoz/signoz-otel-collector/usage"
+	internalmetadata "github.com/fuseone-io/fusescope-otel-collector/exporter/signozclickhousemetrics/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/usage"
 	"github.com/google/uuid"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
@@ -33,7 +33,7 @@ import (
 	"go.opentelemetry.io/otel/metric/noop"
 	"go.uber.org/zap"
 
-	pkgfingerprint "github.com/SigNoz/signoz-otel-collector/internal/common/fingerprint"
+	pkgfingerprint "github.com/fuseone-io/fusescope-otel-collector/internal/common/fingerprint"
 )
 
 var (

@@ -3,7 +3,7 @@ package signozmeterconnector
 import (
 	"context"
 
-	"github.com/SigNoz/signoz-otel-collector/connectors/signozmeterconnector/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/connectors/signozmeterconnector/internal/metadata"
 	"go.opentelemetry.io/collector/connector"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"

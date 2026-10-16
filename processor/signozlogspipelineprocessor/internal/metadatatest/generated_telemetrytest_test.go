@@ -10,7 +10,7 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric/metricdata"
 	"go.opentelemetry.io/otel/sdk/metric/metricdata/metricdatatest"
 
-	"github.com/SigNoz/signoz-otel-collector/processor/signozlogspipelineprocessor/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/processor/signozlogspipelineprocessor/internal/metadata"
 	"go.opentelemetry.io/collector/component/componenttest"
 )
 

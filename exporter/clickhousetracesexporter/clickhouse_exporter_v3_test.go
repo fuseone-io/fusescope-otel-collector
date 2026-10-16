@@ -12,7 +12,7 @@ import (
 
 	driver "github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/SigNoz/signoz-otel-collector/pkg/pdatagen/ptracesgen"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/pdatagen/ptracesgen"
 	goccyjson "github.com/goccy/go-json"
 	"github.com/google/uuid"
 	"github.com/jellydator/ttlcache/v3"
@@ -27,7 +27,7 @@ import (
 	"go.opentelemetry.io/otel/metric/noop"
 	"go.uber.org/zap"
 
-	"github.com/SigNoz/signoz-otel-collector/exporter/clickhousetracesexporter/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/exporter/clickhousetracesexporter/internal/metadata"
 )
 
 func Test_attributesData_add(t *testing.T) {

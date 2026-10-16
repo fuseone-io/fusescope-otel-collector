@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/SigNoz/signoz-otel-collector/processor/signoztailsampler/internal/sampling"
+	"github.com/fuseone-io/fusescope-otel-collector/processor/signoztailsampler/internal/sampling"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.uber.org/zap"
 )

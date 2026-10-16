@@ -1,7 +1,7 @@
 package clickhousetracesexporter
 
 import (
-	"github.com/SigNoz/signoz-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 )
 
 // spanFieldRow is a tag_attributes_v2 row for a top-level span column, written

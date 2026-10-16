@@ -13,7 +13,7 @@ import (
 	"go.opentelemetry.io/collector/receiver/receiverhelper"
 	"go.uber.org/zap"
 
-	"github.com/SigNoz/signoz-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
 )
 
 // systemTablesMetricsReceiver snapshots system.view_refreshes on an interval and

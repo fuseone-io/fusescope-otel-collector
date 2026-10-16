@@ -1,4 +1,4 @@
-package signozspanmapperprocessor // import "github.com/SigNoz/signoz-otel-collector/processor/signozspanmapperprocessor"
+package signozspanmapperprocessor // import "github.com/fuseone-io/fusescope-otel-collector/processor/signozspanmapperprocessor"
 
 import (
 	"context"

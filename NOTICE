@@ -1,0 +1,13 @@
+FuseScope OpenTelemetry Collector
+Copyright (c) 2026-present FuseOne
+
+This product is a modified version of signoz-otel-collector
+(https://github.com/SigNoz/signoz-otel-collector), Copyright SigNoz Inc.,
+licensed under the GNU Affero General Public License v3.0.
+
+Modifications by FuseOne, starting 2026-10-16, include renaming the Go
+module to github.com/fuseone-io/fusescope-otel-collector, renaming the
+distributed binaries and container images, and replacing the CI/release
+pipelines. The complete corresponding source code of this modified version
+is available at https://github.com/fuseone-io/fusescope-otel-collector
+under the same license.

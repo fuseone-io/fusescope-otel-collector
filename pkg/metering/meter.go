@@ -1,7 +1,7 @@
 package metering
 
 import (
-	"github.com/SigNoz/signoz-otel-collector/pkg/schema/traces"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/schema/traces"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/plog"
 	"go.opentelemetry.io/collector/pdata/pmetric"

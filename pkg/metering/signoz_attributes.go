@@ -3,7 +3,7 @@ package metering
 import (
 	"regexp"
 
-	"github.com/SigNoz/signoz-otel-collector/constants"
+	"github.com/fuseone-io/fusescope-otel-collector/constants"
 )
 
 var (

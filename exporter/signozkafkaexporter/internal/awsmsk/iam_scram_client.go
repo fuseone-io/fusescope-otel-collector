@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package awsmsk // import "github.com/SigNoz/signoz-otel-collector/exporter/signozkafkaexporter/internal/awsmsk"
+package awsmsk // import "github.com/fuseone-io/fusescope-otel-collector/exporter/signozkafkaexporter/internal/awsmsk"
 
 import (
 	"errors"
@@ -12,7 +12,7 @@ import (
 	"github.com/goccy/go-json"
 
 	"github.com/Shopify/sarama"
-	"github.com/aws/aws-sdk-go/aws/credentials" //nolint:staticcheck
+	"github.com/aws/aws-sdk-go/aws/credentials"    //nolint:staticcheck
 	sign "github.com/aws/aws-sdk-go/aws/signer/v4" //nolint:staticcheck
 	"go.uber.org/multierr"
 )

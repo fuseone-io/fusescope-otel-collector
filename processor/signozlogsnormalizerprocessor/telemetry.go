@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/SigNoz/signoz-otel-collector/processor/signozlogsnormalizerprocessor/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/processor/signozlogsnormalizerprocessor/internal/metadata"
 )
 
 type bodyKind int

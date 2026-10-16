@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/SigNoz/signoz-otel-collector/receiver/httplogreceiver/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/receiver/httplogreceiver/internal/metadata"
 	"github.com/stretchr/testify/assert"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/component/componenttest"

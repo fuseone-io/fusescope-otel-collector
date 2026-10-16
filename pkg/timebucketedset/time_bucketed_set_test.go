@@ -15,7 +15,7 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric/metricdata"
 	"go.opentelemetry.io/otel/sdk/metric/metricdata/metricdatatest"
 
-	"github.com/SigNoz/signoz-otel-collector/pkg/timebucketedset/internal/metadatatest"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/timebucketedset/internal/metadatatest"
 )
 
 func newSet(t *testing.T, width time.Duration, maxBuckets int, preWriteWindow time.Duration) *Set {

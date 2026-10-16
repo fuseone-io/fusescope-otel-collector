@@ -12,12 +12,12 @@ import (
 
 	"github.com/goccy/go-json"
 
-	"github.com/SigNoz/signoz-otel-collector/pkg/metering"
-	tracesschema "github.com/SigNoz/signoz-otel-collector/pkg/schema/traces"
-	"github.com/SigNoz/signoz-otel-collector/usage"
-	"github.com/SigNoz/signoz-otel-collector/utils"
-	"github.com/SigNoz/signoz-otel-collector/utils/fingerprint"
-	"github.com/SigNoz/signoz-otel-collector/utils/flatten"
+	"github.com/fuseone-io/fusescope-otel-collector/pkg/metering"
+	tracesschema "github.com/fuseone-io/fusescope-otel-collector/pkg/schema/traces"
+	"github.com/fuseone-io/fusescope-otel-collector/usage"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils/fingerprint"
+	"github.com/fuseone-io/fusescope-otel-collector/utils/flatten"
 	"github.com/google/uuid"
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/ptrace"

@@ -13,10 +13,10 @@ RUN apt-get update && \
 
 USER ${USER_UID}
 
-COPY ./target/${OS}-${ARCH}/signoz-otel-collector /signoz-otel-collector
+COPY ./target/${OS}-${ARCH}/fusescope-otel-collector /fusescope-otel-collector
 COPY conf/default.yaml /etc/otel/config.yaml
 
 EXPOSE 4317 4318
 
-ENTRYPOINT [ "/signoz-otel-collector" ]
+ENTRYPOINT [ "/fusescope-otel-collector" ]
 CMD ["--config", "/etc/otel/config.yaml"]

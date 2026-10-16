@@ -18,7 +18,7 @@ import (
 	"go.opentelemetry.io/collector/pdata/pmetric"
 	"go.opentelemetry.io/collector/pdata/ptrace"
 
-	"github.com/SigNoz/signoz-otel-collector/exporter/signozkafkaexporter/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/exporter/signozkafkaexporter/internal/metadata"
 )
 
 // data is a simple means of allowing

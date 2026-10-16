@@ -1,7 +1,7 @@
 package schemamigrator
 
 import (
-	"github.com/SigNoz/signoz-otel-collector/utils"
+	"github.com/fuseone-io/fusescope-otel-collector/utils"
 )
 
 // move them to TracesMigrations once it's ready to deploy

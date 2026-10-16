@@ -6,7 +6,7 @@ import (
 
 	"go.uber.org/multierr"
 
-	"github.com/SigNoz/signoz-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
+	"github.com/fuseone-io/fusescope-otel-collector/receiver/clickhousesystemtablesreceiver/internal/metadata"
 )
 
 type QueryLogScrapeConfig struct {

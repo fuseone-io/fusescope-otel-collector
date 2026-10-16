@@ -2,15 +2,15 @@
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 version: 2
 
-project_name: signoz-otel-collector
+project_name: fusescope-otel-collector
 
 before:
   hooks:
     - go mod tidy
 
 builds:
-  - id: signoz-otel-collector
-    binary: bin/signoz-otel-collector
+  - id: fusescope-otel-collector
+    binary: bin/fusescope-otel-collector
     main: cmd/signozotelcollector/main.go
     goos:
       - linux
