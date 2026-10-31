@@ -2261,5 +2261,72 @@ var TracesMigrations = []SchemaMigrationRecord{
 			},
 		},
 	},
+	{
+		MigrationID: 1019,
+		UpItems: []Operation{
+			AlterTableAddColumn{
+				Database: "signoz_traces",
+				Table:    "traces_v3_resource",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+			AlterTableAddColumn{
+				Database: "signoz_traces",
+				Table:    "distributed_traces_v3_resource",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+			AlterTableAddColumn{
+				Database: "signoz_traces",
+				Table:    "signoz_error_index_v2",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+			AlterTableAddColumn{
+				Database: "signoz_traces",
+				Table:    "distributed_signoz_error_index_v2",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+		},
+		DownItems: []Operation{
+			AlterTableDropColumn{
+				Database: "signoz_traces",
+				Table:    "distributed_traces_v3_resource",
+				Column:   Column{Name: "created_at"},
+			},
+			AlterTableDropColumn{
+				Database: "signoz_traces",
+				Table:    "traces_v3_resource",
+				Column:   Column{Name: "created_at"},
+			},
+			AlterTableDropColumn{
+				Database: "signoz_traces",
+				Table:    "distributed_signoz_error_index_v2",
+				Column:   Column{Name: "created_at"},
+			},
+			AlterTableDropColumn{
+				Database: "signoz_traces",
+				Table:    "signoz_error_index_v2",
+				Column:   Column{Name: "created_at"},
+			},
+		},
+	},
 	// add new new migration to test file for sync/async check as well
 }
