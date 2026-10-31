@@ -548,5 +548,42 @@ ORDER BY name ASC`,
 			},
 		},
 	},
-	// Next migration id will be 2003
+	{
+		MigrationID: 2003,
+		UpItems: []Operation{
+			AlterTableAddColumn{
+				Database: "signoz_logs",
+				Table:    "logs_v2_resource",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+			AlterTableAddColumn{
+				Database: "signoz_logs",
+				Table:    "distributed_logs_v2_resource",
+				Column: Column{
+					Name:         "created_at",
+					Type:         DateTime64ColumnType{Precision: 3},
+					Materialized: "now64(3)",
+					Codec:        "Delta(8), ZSTD(1)",
+				},
+			},
+		},
+		DownItems: []Operation{
+			AlterTableDropColumn{
+				Database: "signoz_logs",
+				Table:    "distributed_logs_v2_resource",
+				Column:   Column{Name: "created_at"},
+			},
+			AlterTableDropColumn{
+				Database: "signoz_logs",
+				Table:    "logs_v2_resource",
+				Column:   Column{Name: "created_at"},
+			},
+		},
+	},
+	// Next migration id will be 2004
 }

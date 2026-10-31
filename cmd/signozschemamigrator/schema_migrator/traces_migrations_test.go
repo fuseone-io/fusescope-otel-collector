@@ -2,6 +2,8 @@ package schemamigrator
 
 import (
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestTracesMigrations(t *testing.T) {
@@ -30,10 +32,30 @@ func TestTracesMigrationsExactNature(t *testing.T) {
 			TracesMigrations[16],
 			TracesMigrations[17],
 			TracesMigrations[18],
+			TracesMigrations[19],
 		},
 		[]SchemaMigrationRecord{
 			TracesMigrations[1], // 1001 (async)
 			TracesMigrations[3], // 1003 (async)
 		},
 	)
+}
+
+func TestTracesMigrationResourceCreatedAt(t *testing.T) {
+	manager := newTestMigrationManager(t)
+	migration := migrationByID(t, TracesMigrations, 1019)
+
+	assert.True(t, manager.IsSync(migration))
+	assert.Equal(t, []string{
+		"ALTER TABLE signoz_traces.traces_v3_resource ON CLUSTER cluster ADD COLUMN IF NOT EXISTS created_at DateTime64(3) MATERIALIZED now64(3) CODEC(Delta(8), ZSTD(1))",
+		"ALTER TABLE signoz_traces.distributed_traces_v3_resource ON CLUSTER cluster ADD COLUMN IF NOT EXISTS created_at DateTime64(3) MATERIALIZED now64(3) CODEC(Delta(8), ZSTD(1))",
+		"ALTER TABLE signoz_traces.signoz_error_index_v2 ON CLUSTER cluster ADD COLUMN IF NOT EXISTS created_at DateTime64(3) MATERIALIZED now64(3) CODEC(Delta(8), ZSTD(1))",
+		"ALTER TABLE signoz_traces.distributed_signoz_error_index_v2 ON CLUSTER cluster ADD COLUMN IF NOT EXISTS created_at DateTime64(3) MATERIALIZED now64(3) CODEC(Delta(8), ZSTD(1))",
+	}, operationsSQL(migration.UpItems))
+	assert.Equal(t, []string{
+		"ALTER TABLE signoz_traces.distributed_traces_v3_resource ON CLUSTER cluster DROP COLUMN IF EXISTS created_at",
+		"ALTER TABLE signoz_traces.traces_v3_resource ON CLUSTER cluster DROP COLUMN IF EXISTS created_at",
+		"ALTER TABLE signoz_traces.distributed_signoz_error_index_v2 ON CLUSTER cluster DROP COLUMN IF EXISTS created_at",
+		"ALTER TABLE signoz_traces.signoz_error_index_v2 ON CLUSTER cluster DROP COLUMN IF EXISTS created_at",
+	}, operationsSQL(migration.DownItems))
 }

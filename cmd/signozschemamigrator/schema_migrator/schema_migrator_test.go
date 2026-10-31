@@ -92,3 +92,22 @@ func checkSchemaMigrationRecordExactNature(t *testing.T, manager *MigrationManag
 		assert.True(t, manager.IsAsync(migration))
 	}
 }
+
+func migrationByID(t *testing.T, migrations []SchemaMigrationRecord, id uint64) SchemaMigrationRecord {
+	t.Helper()
+	for _, migration := range migrations {
+		if migration.MigrationID == id {
+			return migration
+		}
+	}
+	require.FailNowf(t, "migration not found", "migration ID %d", id)
+	return SchemaMigrationRecord{}
+}
+
+func operationsSQL(operations []Operation) []string {
+	sqls := make([]string, 0, len(operations))
+	for _, operation := range operations {
+		sqls = append(sqls, operation.OnCluster("cluster").ToSQL())
+	}
+	return sqls
+}
